@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="jumbotron py-4">
+        <p class="h1 text-center mb-0">Iterative Rendering</p>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let beverage of beverages;let i=index">
+            <span class="lead">
+                {{beverage}}
+            </span>
+            <span>
+                <button class="btn btn-danger" (click)="deleteBeverage(i)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </span>
+        </li>
+    </ul>
+
+    <div class="mt-2">
+        <button class="btn btn-primary" (click)="addBeverage()">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+</div>
